@@ -67,6 +67,11 @@ git log -p -- README.md
 # We note the hash of the commit and use that to restore the file
 git restore --source=<hash> -- README.md
 
+# What happens in case a file is changed in the remote repository
+# and also locally?
+# [I change something in README.md]
+
+
 # Step 4: Demonstrate resolving a version conflict
 echo "Simulating a version conflict..."
 # Simulating a conflicting change by making a local change
