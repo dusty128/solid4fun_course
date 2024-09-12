@@ -2,15 +2,37 @@
 git config --global user.email "<your-email>"
 git config --global user.name "<your name>"
 
-# Step 1: Clone the repository
-git clone https://github.com/dusty128/test-repo.git
-cd test-repo
+# Step 1: Clone the solid4fun repository
+git clone https://github.com/dusty128/solid4fun_code.git
+cd solid4fun_code
 
-# Step 2: Add some files
-echo "print('Hello, Solid4Fun!')" > hello.py
-echo "# Sample README" > README.md
+# Now open the pycharm editor and use this project
+# For the Name use "solid4fun_course"
+# Custom Environment
+# (create from existing sources)
 
-# Step 3: Stage, commit, and push changes
+# Open the file "03-version_control.sh"
+
+# O.k., let's play around with git first
+# Open (Power)shell, create some directory and create git environment
+mkdir git-example
+cd git-example
+
+# Initialize git
+git init
+
+# .git has been created (dir -Force / ls -la)
+
+# Step 2: Add some files with some editor (e.g. nano, vim, notepad)
+nano hello.py
+#->  print ("Hello, Solid4Fun!")
+nano README.md
+#-> Sample README
+
+# You python file should execute:
+python hello.py
+
+# Step 3: Stage, and commit
 git add .
 git commit -m "Initial commit with hello.py and README.md"
 echo "Pushing changes to the remote repository..."
