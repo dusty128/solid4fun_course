@@ -1,8 +1,8 @@
-# Step 0: Configure git
+# Configure git
 git config --global user.email "<your-email>"
 git config --global user.name "<your name>"
 
-# Step 1: Clone the solid4fun repository
+# Clone the solid4fun repository
 git clone https://github.com/dusty128/solid4fun_code.git
 cd solid4fun_code
 
@@ -23,7 +23,7 @@ git init
 
 # .git has been created (dir -Force / ls -la)
 
-# Step 2: Add some files with some editor (e.g. nano, vim, notepad)
+# Add some files with some editor (e.g. nano, vim, notepad)
 nano hello.py
 #->  print ("Hello, Solid4Fun!")
 nano README.md
@@ -32,11 +32,40 @@ nano README.md
 # You python file should execute:
 python hello.py
 
-# Step 3: Stage, and commit
+# Stage, and commit
 git add .
 git commit -m "Initial commit with hello.py and README.md"
-echo "Pushing changes to the remote repository..."
-git push origin main
+# Theoretically you could now push (=upload) your code to a remote repository
+# -> We don't have any, so we won't do so
+### git push origin main
+
+# Now let's change a file
+nano README.md
+# -> Apply some changes and save
+# Show status
+git status
+
+# Undo the changes and go back to the last commit
+git restore Readme.md
+
+# Now let's change the file again
+nano README.md
+# -> Apply some changes and save
+
+# Now let's commit it
+git commit . -m "Test"
+# We see that there are no changes
+git status
+
+# Now let's have a look at the commits we did for this file, should be two
+git log -- README.md
+
+# And have a look at the changes
+git log -p -- README.md
+
+# Great, now let's revert it to the first version
+# We note the hash of the commit and use that to restore the file
+git restore --source=<hash> -- README.md
 
 # Step 4: Demonstrate resolving a version conflict
 echo "Simulating a version conflict..."
