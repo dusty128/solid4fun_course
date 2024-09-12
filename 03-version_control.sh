@@ -69,7 +69,8 @@ git restore --source=<hash> -- README.md
 
 # What happens in case a file is changed in the remote repository
 # and also locally?
-# [I change something in README.md]
+# [I change something in somefile.txt]
+# You change something in somefile.txt
 
 
 # Step 4: Demonstrate resolving a version conflict
