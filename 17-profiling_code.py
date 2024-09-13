@@ -1,10 +1,12 @@
+"""
+Example code for testing profiling and optimizing
+"""
+
 import random
 import time
 
-# GONE
-import timeit
-
 def generate_data(size):
+    """ Generate some sample data """
     data = []
     for _ in range(size):
         data.append(random.randint(1, 100))
@@ -12,25 +14,23 @@ def generate_data(size):
 
 
 def compute_average(data):
-    # Inefficient summation
+    """ Compute the average of a list """
     total = 0
     for i in range(len(data)):
         total += data[i]
     average = total / len(data)
     return average
 
-
 def remove_duplicates(data):
-    # Inefficient duplicate removal
+    """ Remove duplicates from a list """
     unique_data = []
     for item in data:
         if item not in unique_data:
             unique_data.append(item)
     return unique_data
 
-
 def sort_data(data):
-    # Inefficient sorting algorithm (selection sort)
+    """ Sort data in a list """
     sorted_data = data.copy()
     for i in range(len(sorted_data)):
         min_idx = i
@@ -40,8 +40,8 @@ def sort_data(data):
         sorted_data[i], sorted_data[min_idx] = sorted_data[min_idx], sorted_data[i]
     return sorted_data
 
-@profile
 def process_data(data):
+    """ Calculate average and return data sorted and unique """
     average = compute_average(data)
     unique_data = remove_duplicates(data)
     sorted_data = sort_data(unique_data)
