@@ -53,7 +53,7 @@ nano README.md
 # -> Apply some changes and save
 
 # Now let's commit it
-git commit . -m "Test"
+git commit . -m "Change README.md"
 # We see that there are no changes
 git status
 
@@ -69,7 +69,7 @@ git restore --source=<hash> -- README.md
 
 # What happens in case a file is changed in the remote repository
 # and also locally?
-# [I change something in somefile.txt] and push changes
+# [I change something in somefile.txt] and push changes ...
 # You change something in somefile.txt
 
 # Now pull changes from remote repository
