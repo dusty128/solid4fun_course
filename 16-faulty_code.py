@@ -1,6 +1,7 @@
 # Find the bug in the following program using a debugger
 
 def flatten(lst):
+    """ Flatten a Python list object through recursive operations """
     flat_list = []
     for item in lst:
         if isinstance(item, list):

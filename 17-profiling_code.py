@@ -12,15 +12,6 @@ def generate_data(size):
         data.append(random.randint(1, 100))
     return data
 
-
-def compute_average(data):
-    """ Compute the average of a list """
-    total = 0
-    for i in range(len(data)):
-        total += data[i]
-    average = total / len(data)
-    return average
-
 def remove_duplicates(data):
     """ Remove duplicates from a list """
     unique_data = []
@@ -28,6 +19,16 @@ def remove_duplicates(data):
         if item not in unique_data:
             unique_data.append(item)
     return unique_data
+
+def compute_average(data):
+    """ Compute the average of a list """
+    total = 0
+    data_length = len(data)
+    for i in range(data_length):
+        total += data[i]
+    average = total / len(data)
+    return average
+
 
 def sort_data(data):
     """ Sort data in a list """
@@ -50,6 +51,7 @@ def process_data(data):
 
 def main():
     data_size = 1000000  # Adjust the size for more pronounced inefficiencies
+    # Create some sample data for our profiling example
     data = generate_data(data_size)
 
     start_time = time.time()

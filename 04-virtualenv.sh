@@ -61,8 +61,6 @@ pip uninstall flask
 
 A well-organized project structure is key to maintaining clean and manageable code.
 
-bash
-
 my_project/
 ├── venv/              # Virtual environment folder
 ├── src/               # Source code folder
@@ -95,13 +93,6 @@ python src/main.py
 # Deactivate the virtual environment
 deactivate
 
-# Ignoring the venv Folder in Version Control
-
-# When using version control systems like Git, you should not include
-# the venv folder. Instead, use .gitignore to ignore it.
-
-# Create a .gitignore file
-venv/
 
 # Re-creating Environments
 # Typical example (powershell example)
@@ -112,6 +103,8 @@ cd my_webserver
 
 # Recreate the environment
 virtualenv venv
+# Alternative (for other python version)
+python3.6 -m venv venv
 
 # Activate and install dependencies
 source venv/bin/activate
@@ -121,6 +114,12 @@ pip install -r requirements.txt
 python src/main.py
 
 # Browse to http://localhost:5000
+
+# When using version control systems like Git, you should not include
+# the venv folder. Instead, use .gitignore to ignore it.
+
+# Create a .gitignore file
+venv/
 
 # Stop server and deactivate environment
 deactivate
