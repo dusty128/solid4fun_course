@@ -87,32 +87,37 @@ cd ../data
 
 # Go into the top directory of your code
 git init
+# Check for files
+# Create some git ignore (with .idea, my_processor)
+# Add and commit
 git add .
 git commit -m "initial commit"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ########### Virtual Environmen ###############
+# -> What are the necessary steps?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Create venv
-python -m venv myenv
+python -m venv venv
 # Activate it
-source myenv/bin/activate
+source venv/bin/activate
+# On Windows
+venv\Scripts\activate
 
 # Install numpy and pandas (I know, they are already there, nevertheless)
 pip install numpy
